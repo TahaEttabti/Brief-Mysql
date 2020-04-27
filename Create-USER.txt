@@ -1,0 +1,63 @@
+mysql> select host,user from mysql.user; 
++-----------+------------------+ 
+| host      | user             |
++-----------+------------------+
+| %         | Ettabti Taha     |
+| localhost | mysql.infoschema |
+| localhost | mysql.session    |
+| localhost | mysql.sys        |
+| localhost | root             |
++-----------+------------------+
+5 rows in set (0.00 sec)
+
+============================================================================================================
+
+mysql> create user 'TAHA'@'localhost' identified by 'Youcode2020';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select host,user from mysql.user;
++-----------+------------------+
+| host      | user             |
++-----------+------------------+
+| %         | Ettabti Taha     |
+| localhost | TAHA             |
+| localhost | mysql.infoschema |
+| localhost | mysql.session    |
+| localhost | mysql.sys        |
+| localhost | root             |
++-----------+------------------+
+6 rows in set (0.00 sec)
+
+============================================================================================================
+
+mysql> GRANT SELECT ON *.* TO 'TAHA'@'localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> GRANT INSERT ON *.* TO 'TAHA'@'localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> GRANT UPDATE ON *.* TO 'TAHA'@'localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> GRANT CREATE ON *.* TO 'TAHA'@'localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> GRANT DELETE ON *.* TO 'TAHA'@'localhost';
+Query OK, 0 rows affected (0.01 sec)
+
+============================================================================================================
+
+mysql>  SHOW GRANTS FOR 'TAHA'@'localhost';
++---------------------------------------------------------------------------+
+| Grants for TAHA@localhost                                                 |
++---------------------------------------------------------------------------+
+| GRANT SELECT, INSERT, UPDATE, DELETE, CREATE ON *.* TO `TAHA`@`localhost` |
++---------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+===========================================================================================================
+
+1- 1er commande pour afficher les hosts and users.
+2- 2eme commande pour create user.
+3- les cinq derniére commande pour les droits spécifies.
+4- 4eme commande pour afficher les grants d'un utilisateur.
