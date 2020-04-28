@@ -1,29 +1,31 @@
-1- Create Database in command-line : mysql > Create database myserver;
+1- Create Database in command-line : mysql > Create database taha;
 
 =====================================================================================
 
 2- Insert Data : 
 
 --> insert into client 
-    values (1, 'Ahmed', 'Hassan', 'ahmed55@gmail.com', '0643584633', 'N° 12 Bloc 5 SAFI', '1990-1-1');
+    values ('Ahmed', 'Alaoui', 'ahmed@gmail.com', '0645654454', '12 Qu Saada Safi', '1990-05-05');
     
-    SELECT * FROM myserver.client;
+    SELECT * FROM taha.client;
 ======================================================================================
 
 3- Update Data : 
 
 --> update client 
-    set Nom = 'Mohammed', 'Ibrahimi', 'Mohammed44@gmail.com', '06445432432', 'N° 10 Bloc 5 SAFI', '1991-1-1')
-    where ID_Client = 1;
+    set Nom = 'Mohammed'
+    where ID_Client = 3;
 
+    SELECT * FROM taha.client;	
 =======================================================================================
 
 4- Delete Data : 
 
---> delete from client where ID_Client = 1;
+--> delete from client where ID_Client = 2;
 
+    SELECT * FROM taha.client;
 
 ======================================================================================
 
-NB : C'est la même chose pour les autres elements.
+NB : C'est la même chose pour les autres elements de tables.
     
