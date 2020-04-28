@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* Nom de SGBD :  MySQL 5.0                                     */
-/* Date de création :  26/04/2020 16:46:43                      */
+/* Date de création :  28/04/2020 00:21:33                      */
 /*==============================================================*/
 
 
@@ -31,6 +31,7 @@ create table Client
 create table Reservation
 (
    ID_Client            int,
+   ID_Voiture           int,
    Id_Reservation       int not null,
    Nbr_Jours            int,
    Date_Debut           datetime,
@@ -45,7 +46,6 @@ create table Reservation
 create table Voiture
 (
    ID_Voiture           int not null,
-   Id_Reservation       int,
    Marque               varchar(254),
    Modele               varchar(254),
    Nbr_Palce            smallint,
@@ -57,6 +57,6 @@ create table Voiture
 alter table Reservation add constraint FK_Association_1 foreign key (ID_Client)
       references Client (ID_Client) on delete restrict on update restrict;
 
-alter table Voiture add constraint FK_Association_2 foreign key (Id_Reservation)
-      references Reservation (Id_Reservation) on delete restrict on update restrict;
+alter table Reservation add constraint FK_Association_2 foreign key (ID_Voiture)
+      references Voiture (ID_Voiture) on delete restrict on update restrict;
 

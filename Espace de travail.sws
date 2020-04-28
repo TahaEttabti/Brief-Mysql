@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner signature="Workspace" version="15.1.0.2850"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Workspace>
+	<Local Expanded="Yes">
+		<Model Expanded="Yes" ID="{365B1DE9-A239-472C-8493-1946DD7C3A5A}" Name="Location_Voiture" Selected="Yes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Location_Voiture.moo"/>
+		<Model Expanded="Yes" ID="{C4E8BB37-02E4-4004-B8EC-7AB42D6EF15D}" Name="Location_Voiture" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="Location_Voiture.mpd"/>
+	</Local>
+	<BrowserModule Name="Référentiel"/>
+</Workspace>
